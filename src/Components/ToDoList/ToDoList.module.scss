@@ -1,0 +1,94 @@
+section {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  height: 80vh;
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+// .todoForm {
+//   width: 35%;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 0.5rem;
+// }
+
+.todoList {
+  border-radius: 5px;
+  padding: 15px;
+  //width: 65%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: auto;
+}
+
+.listado {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  table {
+    width: 100%;
+    margin: 10px;
+    table-layout: fixed;
+  }
+
+  th {
+    background-color: #f3ecec;
+    text-align: center;
+    border: solid 1px #cccc;
+    font-size: 18px;
+  }
+
+  tr {
+    padding: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  td {
+    text-align: center;
+    padding: 5px;
+    border: solid 1px #cccc;
+  }
+
+  .deleteTask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3ecec;
+    padding: 20px;
+    border-radius: 5px;
+
+    h4 {
+      font-size: 18px;
+      margin: 5px;
+    }
+    h5 {
+      font-size: 16px;
+      margin: 5px;
+    }
+    button {
+      margin: 5px;
+      gap: 10px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

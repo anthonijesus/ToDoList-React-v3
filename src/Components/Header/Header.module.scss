@@ -1,0 +1,23 @@
+.header {
+    background-color: #1a314e;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+    h1 {
+        font-size: 32px;
+        color: white;
+    }
+    
+    button {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
