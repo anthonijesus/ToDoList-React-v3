@@ -29,6 +29,10 @@
       border-radius: 5px;
       cursor: pointer;
     }
+    button:hover{
+      background-color: #4b864e;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
   }
   img {
     width: 350px;

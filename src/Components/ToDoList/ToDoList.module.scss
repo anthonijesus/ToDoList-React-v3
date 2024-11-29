@@ -9,14 +9,6 @@ section {
   }
 }
 
-// .todoForm {
-//   width: 35%;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   gap: 0.5rem;
-// }
-
 .todoList {
   border-radius: 5px;
   padding: 15px;
@@ -42,6 +34,11 @@ section {
     width: 100%;
     margin: 10px;
     table-layout: fixed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-collapse: collapse;
+    width: 100%;
   }
 
   th {
@@ -56,7 +53,10 @@ section {
     text-align: center;
     flex-wrap: wrap;
   }
-
+  
+  tr:hover {
+      background-color: #ebe5e5;
+  }
   td {
     text-align: center;
     padding: 5px;

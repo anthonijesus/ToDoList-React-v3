@@ -8,7 +8,7 @@ const Header = () => {
     <header className={styles.header}>
       <h1>ToDo List React</h1>
       <span>
-        <button onClick={openModal}>Agregar Nuevas Tareas</button>
+        <button onClick={openModal}>Agrega Nuevas Tareas</button>
       </span>
     </header>
   );

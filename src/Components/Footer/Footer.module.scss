@@ -1,9 +1,10 @@
 .footer {
-    grid-area: footer;
-    background-color: #1a314e;
+    background: linear-gradient(to right, #4caf50, #81c784);
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    padding: 10px;
+    color: white;
+    font-size: 0.8rem;
 }

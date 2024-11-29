@@ -6,11 +6,13 @@ const DeleteForm = () => {
   return (
     <div>
       <div className={styles.deleteTask}>
-        <h4>Desea Borrar la tarea con el titulo?</h4>
-        <h5>{taskToDelete.name}</h5>
-        <div>
-          <button onClick={() => removeTask(taskToDelete._id)}>SI</button>
+        <div className={styles.confirm}>
+          <h4>Desea Borrar la tarea con el titulo?</h4>{" "}
+          <span>
+            <button onClick={() => removeTask(taskToDelete._id)}>SI</button>
+          </span>
         </div>
+        <h5>{taskToDelete.name}</h5>
       </div>
     </div>
   );

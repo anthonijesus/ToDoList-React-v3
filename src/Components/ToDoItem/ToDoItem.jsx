@@ -1,7 +1,7 @@
 import React from "react";
 import { useTask } from "../../Context/TaskContext.jsx";
 import styles from "./ToDoItem.module.scss";
-
+import { FaEdit, FaTrash } from "react-icons/fa";
 //
 const ToDoItem = ({ task }) => {
   //
@@ -18,8 +18,12 @@ const ToDoItem = ({ task }) => {
             checked={task.isCompleted}
             readOnly
           />
-          <button onClick={() => showDeleteTask(task)}>Borrar</button>
-          <button onClick={() => editTask(task)}>Editar</button>
+          <button onClick={() => showDeleteTask(task)}>
+            <FaTrash />
+          </button>
+          <button onClick={() => editTask(task)}>
+            <FaEdit />
+          </button>
         </td>
         <td>{task.name}</td>
         <td>{task.description}</td>
