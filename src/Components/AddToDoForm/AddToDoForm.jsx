@@ -4,23 +4,14 @@ import { useTask } from "../../Context/TaskContext";
 import styles from "./AddToDoForm.module.scss";
 
 const AddToDoForm = () => {
-  const {
-    addNewTask,
-    taskToEdit,
-    taskUpdated,
-    closeModal,
-    isEditing,
-    isDeleting,
-  } = useTask();
-  //
+  const { addNewTask, taskToEdit, taskUpdated, closeModal, isEditing } =
+    useTask();
+
   const [taskName, setTaskName] = useState(taskToEdit?.name || "");
   const [taskDescription, setTaskDescription] = useState(
     taskToEdit?.description || ""
   );
 
-  //
-
-  //
   useEffect(() => {
     if (isEditing && taskToEdit) {
       setTaskName(taskToEdit.name || "");
@@ -31,14 +22,6 @@ const AddToDoForm = () => {
     }
   }, [isEditing, taskToEdit]);
 
-  //
-  useEffect(() => {
-    if (isDeleting) {
-      setTaskName("");
-      setTaskDescription("");
-    }
-  }, [isDeleting]);
-  //
   function updateTask() {
     const updatedTask = {
       _id: taskToEdit._id,
@@ -52,7 +35,6 @@ const AddToDoForm = () => {
     }
 
     taskUpdated(updatedTask);
-    //
     closeModal();
   }
 

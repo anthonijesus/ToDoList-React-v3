@@ -44,8 +44,9 @@ export const TaskProvider = ({ children }) => {
   const openModal = () => setIsModalOpen(true);
   //Cierra el modal y cierra el formulario de edición si esta abierto antes de que se ejecute una accion de agregar nueva tarea
   const closeModal = () => {
-    setIsModalOpen(false);
     setIsEditing(false);
+    setIsModalOpen(false);
+    setIsDeleting(false);
   };
 
   useEffect(() => {
@@ -72,6 +73,13 @@ export const TaskProvider = ({ children }) => {
     setIsModalOpen(false);
   }
 
+  async function showDeleteTask(task) {
+    setIsModalOpen(true);
+    setIsDeleting(true);
+    setTaskToDelete(task);
+    //setIsEditing(false);
+  }
+
   async function removeTask(taskId) {
     try {
       await axios.delete(`http://localhost:3000/api/task/${taskId}`);
@@ -80,6 +88,7 @@ export const TaskProvider = ({ children }) => {
       console.log("Error: ", error);
     }
     setIsDeleting(false);
+    setIsModalOpen(false);
   }
 
   async function taskUpdated(task) {
@@ -126,13 +135,6 @@ export const TaskProvider = ({ children }) => {
     });
   }
   //
-
-  async function showDeleteTask(task) {
-    console.log(task);
-    setTaskToDelete(task);
-    setIsDeleting(true);
-    setIsEditing(false);
-  }
 
   return (
     <TaskContext.Provider //El .Provider es una propiedad de React que nos permite compartir datos con el contexto que se creo al inicio ---> </TaskContext.Provider>const TaskContext = createContext();

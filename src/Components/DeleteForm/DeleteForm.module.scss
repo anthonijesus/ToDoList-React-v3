@@ -1,0 +1,28 @@
+.deleteTask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3ecec;
+    padding: 20px;
+    border-radius: 5px;
+
+    h4 {
+      font-size: 18px;
+      margin: 5px;
+    }
+    h5 {
+      font-size: 16px;
+      margin: 5px;
+    }
+    button {
+      margin: 5px;
+      gap: 10px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
